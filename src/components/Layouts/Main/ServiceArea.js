@@ -39,7 +39,7 @@ const ServiceArea = () => {
               <h3 className="service-title">Cardio</h3>
               <p className="service-des">Remo, Kickboxing, Saltos Pliométricos, Baile, Entrenamiento de Circuito</p>
               <div className="service-btn">
-                <a href="service.html">Ver Más<i className="bi bi-arrow-right-short"></i></a>
+                <a href="">Ver Más<i className="bi bi-arrow-right-short"></i></a>
               </div>
             </div>
           </div>

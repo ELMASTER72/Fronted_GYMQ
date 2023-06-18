@@ -17,17 +17,20 @@ function Navbar() {
             <nav className="dreamhub_menu">
               <ul className="nav_scroll">
                 <li><a href="/">Inicio</a></li>
-                <li><a href="">Nosotros</a></li>
+                <li><a href="/Nosotros">Nosotros</a></li>
                 <li className={isMenuOpen ? 'active' : ''}>
                   <a href="" onClick={toggleMenu}>
                     Gimnasios <i className="fas fa-chevron-down"></i>
                   </a>
+<<<<<<< HEAD
                   <ul className={`sub-menu ${isMenuOpen ? 'open' : ''}`}>
                     <li><a href="/Visual_Gym">Smart Power Gym</a></li>
                   </ul>
+=======
+>>>>>>> dc6689235dd17f3122f0501e6e2aac8b472bab9e
                 </li>
                 <li>
-                  <a href="">
+                  <a href="/Servicios">
                     Servicios <i className="fas fa-chevron-down"></i>
                   </a>
                   <ul className="sub-menu">
@@ -37,12 +40,14 @@ function Navbar() {
                 </li>
               </ul>
             </nav>
+            <div className='buttonsAccount'>
               <div className="dreamhub-btn">
                 <a href="/Login">Ingresar</a>
               </div>
               <div className="dreamhub-btn">
                 <a href="/register">Registrar</a>
               </div>
+            </div>
     </div>
   );
 }

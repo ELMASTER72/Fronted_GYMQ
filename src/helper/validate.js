@@ -10,7 +10,7 @@ export async function usernameValidate(values){
         const { status } = await authenticate(values.username);
         
         if(status !== 200){
-            errors.exist = toast.error('User does not exist...!')
+            errors.exist = toast.error('Este usuario no existe...!')
         }
     }
 
@@ -29,7 +29,7 @@ export async function resetPasswordValidation(values){
     const errors = passwordVerify({}, values);
 
     if(values.password !== values.confirm_pwd){
-        errors.exist = toast.error("Password not match...!");
+        errors.exist = toast.error("La contraseña no coincide...!");
     }
 
     return errors;
@@ -59,13 +59,13 @@ function passwordVerify(errors = {}, values){
     const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
     if(!values.password){
-        errors.password = toast.error("Password Required...!");
+        errors.password = toast.error("Se requiere contraseña...!");
     } else if(values.password.includes(" ")){
-        errors.password = toast.error("Wrong Password...!");
+        errors.password = toast.error("Contraseña incorrecta...!");
     }else if(values.password.length < 4){
-        errors.password = toast.error("Password must be more than 4 characters long");
+        errors.password = toast.error("La contraseña debe tener más de 4 caracteres");
     }else if(!specialChars.test(values.password)){
-        errors.password = toast.error("Password must have special character");
+        errors.password = toast.error("La contraseña debe tener un carácter especial");
     }
 
     return errors;
@@ -75,9 +75,9 @@ function passwordVerify(errors = {}, values){
 /** validate username */
 function usernameVerify(error = {}, values){
     if(!values.username){
-        error.username = toast.error('Username Required...!');
+        error.username = toast.error('Usuario Requerido...!');
     }else if(values.username.includes(" ")){
-        error.username = toast.error('Invalid Username...!')
+        error.username = toast.error('Usuario Invalido...!')
     }
 
     return error;
@@ -86,11 +86,11 @@ function usernameVerify(error = {}, values){
 /** validate email */
 function emailVerify(error ={}, values){
     if(!values.email){
-        error.email = toast.error("Email Required...!");
+        error.email = toast.error("Gmail Requerido...!");
     }else if(values.email.includes(" ")){
-        error.email = toast.error("Wrong Email...!")
+        error.email = toast.error("Email incorrecto...!")
     }else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)){
-        error.email = toast.error("Invalid email address...!")
+        error.email = toast.error("Dirección de correo electrónico no válida...!")
     }
 
     return error;
