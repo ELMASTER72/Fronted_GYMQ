@@ -22,9 +22,6 @@ function Navbar() {
                   <a href="" onClick={toggleMenu}>
                     Gimnasios <i className="fas fa-chevron-down"></i>
                   </a>
-                  <ul className={`sub-menu ${isMenuOpen ? 'open' : ''}`}>
-                    <li><a href="">Smart Power Gym</a></li>
-                  </ul>
                 </li>
                 <li>
                   <a href="">
@@ -37,12 +34,14 @@ function Navbar() {
                 </li>
               </ul>
             </nav>
+            <div className='buttonsAccount'>
               <div className="dreamhub-btn">
                 <a href="/Login">Ingresar</a>
               </div>
               <div className="dreamhub-btn">
                 <a href="/register">Registrar</a>
               </div>
+            </div>
     </div>
   );
 }

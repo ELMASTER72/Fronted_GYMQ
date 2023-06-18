@@ -6,6 +6,11 @@ import { useNavigate } from 'react-router-dom'
 function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate()
+  const [showOptions, setShowOptions] = useState(false);
+
+  const handleProfileButtonClick = () => {
+    setShowOptions(!showOptions);
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -52,11 +57,17 @@ function Navbar() {
                 </li>
               </ul>
             </nav>
-              <div className="dreamhub-btn" >
-              <button>{apiData?.username}</button>
-              <button onClick={userperfil} className='text-red-500'>Perfil</button>
-            <button onClick={userLogout} className='text-red-500'>Salir</button>
-              </div>
+            <div className="dreamhub-btn-profile">
+              <button onClick={handleProfileButtonClick}>
+                {/* {apiData?.username} */} Hola
+              </button>
+              {showOptions && (
+                <div className='modalProfile'>
+                  <button onClick={userperfil} className="text-red-500">Perfil</button>
+                  <button onClick={userLogout} className="text-red-500">Salir</button>
+                </div>
+              )}
+            </div>
     </div>
   );
 }

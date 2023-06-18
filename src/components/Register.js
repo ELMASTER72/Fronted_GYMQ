@@ -35,7 +35,7 @@ export default function Register() {
 
       registerPromise.then(function(){ navigate('/')});
     }
-  })
+  }) 
 
   /** formik doensn't support file upload so we need to create this handler */
   const onUpload = async e => {
@@ -49,21 +49,21 @@ export default function Register() {
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
       <div className='flex justify-center items-center h-screen'>
-        <div className={styles.glass} style={{ width: "45%", paddingTop: '3em'}}>
+        <div className={styles.glassRegister} style={{ width: "45%", paddingTop: '3em'}}>
 
           <div className="title flex flex-col items-center">
-            <h4 className='text-5xl font-bold'>Register</h4>
+            <h4 className='text-5xl font-bold'>Registro</h4>
             <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
-                Happy to join you!
+                
             </span>
           </div>
 
           <form className='py-1' onSubmit={formik.handleSubmit}>
-              <div className='profile flex justify-center py-4'>
+              <div className='profileRegister flex justify-center py-4'>
                   <label htmlFor="profile">
                     <img src={file || avatar} className={styles.profile_img} alt="avatar" />
                   </label>
-                  
+                   
                   <input onChange={onUpload} type="file" id='profile' name='profile' />
               </div>
 
@@ -75,7 +75,7 @@ export default function Register() {
               </div>
 
               <div className="text-center py-4">
-                <span className='text-gray-500'>Already Register? <Link className='text-red-500' to="/Login">Login Now</Link></span>
+                <span className='text-gray-500'>¿Ya tienes una cuenta? <Link className='text-red-500' to="/Login">Iniciar Sesión</Link></span>
               </div>
 
           </form>

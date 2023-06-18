@@ -8,7 +8,7 @@ import { useNavigate, Navigate } from 'react-router-dom';
 import useFetch from '../hooks/fetch.hook'
 
 import styles from '../styles/Username.module.css';
-
+ 
 export default function Reset() {
 
   const { username } = useAuthStore(state => state.auth);
