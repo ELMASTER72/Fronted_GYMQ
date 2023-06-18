@@ -23,7 +23,7 @@ function Navbar() {
                     Gimnasios <i className="fas fa-chevron-down"></i>
                   </a>
                   <ul className={`sub-menu ${isMenuOpen ? 'open' : ''}`}>
-                    <li><a href="">Smart Power Gym</a></li>
+                    <li><a href="/Visual_Gym">Smart Power Gym</a></li>
                   </ul>
                 </li>
                 <li>
@@ -32,7 +32,7 @@ function Navbar() {
                   </a>
                   <ul className="sub-menu">
                     <li><a href="">Rutinas</a></li>
-                    <li><a href="">Tienda</a></li>
+                    <li><a href="/Store">Tienda</a></li>
                   </ul>
                 </li>
               </ul>

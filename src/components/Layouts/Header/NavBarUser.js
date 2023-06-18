@@ -47,7 +47,7 @@ function Navbar() {
                   </a>
                   <ul className="sub-menu">
                     <li><a href="">Rutinas</a></li>
-                    <li><a href="">Tienda</a></li>
+                    <li><a href="/Store">Tienda</a></li>
                   </ul>
                 </li>
               </ul>

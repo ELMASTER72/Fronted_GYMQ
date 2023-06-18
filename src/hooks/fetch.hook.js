@@ -34,4 +34,5 @@ export default function useFetch(query){
     }, [query]);
 
     return [getData, setData];
+    
 }

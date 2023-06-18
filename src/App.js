@@ -12,6 +12,11 @@ import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import Home from './components/Pages/Home';
 import HomeUser from './components/Pages/HomeUser';
+import Marketplace from './components/Pages/Marketplace/Marketplace';
+import Gyms_stock from './components/Pages/Gyms/Gyms_stock';
+import { CartProvider } from './components/ui/Cart_store/Car_Store';
+import { CardProvider } from './components/ui/Card_Gym/Card_Gym';
+
 
 
 /** auth middleware */
@@ -54,6 +59,14 @@ const router = createBrowserRouter([
     {
         path : '/Home',
         element : <HomeUser></HomeUser>
+    },
+    {
+        path : '/Store',
+        element : <CartProvider><Marketplace/></CartProvider>
+    },
+    {
+        path : '/Visual_Gym',
+        element : <CardProvider><Gyms_stock/></CardProvider>
     }
 ])
 
