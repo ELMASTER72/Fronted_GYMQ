@@ -12,6 +12,8 @@ import Reset from './components/Reset';
 import PageNotFound from './components/PageNotFound';
 import Home from './components/Pages/Home';
 import HomeUser from './components/Pages/HomeUser';
+import Us from './components/Pages/Us'
+import Service from './components/Pages/Service'
 
 
 /** auth middleware */
@@ -54,6 +56,14 @@ const router = createBrowserRouter([
     {
         path : '/Home',
         element : <HomeUser></HomeUser>
+    },
+    {
+        path : '/Nosotros',
+        element: <Us></Us>
+    },
+    {
+        path : '/Servicios',
+        element : <Service></Service>
     }
 ])
 

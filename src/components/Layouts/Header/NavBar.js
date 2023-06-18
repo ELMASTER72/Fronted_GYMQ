@@ -17,14 +17,14 @@ function Navbar() {
             <nav className="dreamhub_menu">
               <ul className="nav_scroll">
                 <li><a href="/">Inicio</a></li>
-                <li><a href="">Nosotros</a></li>
+                <li><a href="/Nosotros">Nosotros</a></li>
                 <li className={isMenuOpen ? 'active' : ''}>
                   <a href="" onClick={toggleMenu}>
                     Gimnasios <i className="fas fa-chevron-down"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="/Servicios">
                     Servicios <i className="fas fa-chevron-down"></i>
                   </a>
                   <ul className="sub-menu">
