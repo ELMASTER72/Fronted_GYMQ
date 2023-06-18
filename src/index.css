@@ -870,7 +870,10 @@ body{
 
   /* USERNAME */
   .container{
-    background-color: #000;
+    background-image: url(https://res.cloudinary.com/dkyqaw07i/image/upload/v1687096367/Imagen25_m6q2tz.png);
+    max-width: 160%;
+    background-size: cover;
+    height: 100%;
   }
   .text-5xl {
     font-size: 25px;
@@ -880,7 +883,10 @@ body{
     color: black;
   }
   .text-red-500 {
-    color: #FFF000;
+    color: #000;
+  }
+  .py-4{
+    color: black;
   }
   .textboxrecovery .input {
     margin-top: -4rem
