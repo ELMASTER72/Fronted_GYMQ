@@ -22,12 +22,9 @@ function Navbar() {
                   <a href="" onClick={toggleMenu}>
                     Gimnasios <i className="fas fa-chevron-down"></i>
                   </a>
-<<<<<<< HEAD
                   <ul className={`sub-menu ${isMenuOpen ? 'open' : ''}`}>
                     <li><a href="/Visual_Gym">Smart Power Gym</a></li>
                   </ul>
-=======
->>>>>>> dc6689235dd17f3122f0501e6e2aac8b472bab9e
                 </li>
                 <li>
                   <a href="/Servicios">

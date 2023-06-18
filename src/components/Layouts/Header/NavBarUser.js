@@ -10,7 +10,7 @@ function Navbar() {
 
   const handleProfileButtonClick = () => {
     setShowOptions(!showOptions);
-  };
+  }; 
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
