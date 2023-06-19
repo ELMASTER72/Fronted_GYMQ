@@ -20,7 +20,7 @@ import DetailsRutine from './components/Pages/DetailsRutine/DetailsRutine';
 import { CartProvider } from './components/ui/Cart_store/Car_Store';
 import { CardProvider } from './components/ui/Card_Gym/Card_Gym';
 import { CardrutineProvider } from './components/ui/CardRutine/Card_Rutine';
-
+import Us from './components/Pages/Us'
 
 
 
@@ -84,6 +84,10 @@ const router = createBrowserRouter([
     {
         path : '/detail/:name',
         element : <CardrutineProvider><DetailsRutine/></CardrutineProvider>
+    },
+    {
+        path: '/Nosotros',
+        element: <Us></Us>
     }
 ])
 
