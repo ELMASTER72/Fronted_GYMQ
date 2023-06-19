@@ -17,7 +17,7 @@ const getGymData = async () => {
     const details = await result.data
     setDetails(details)
 
-    console.log(details.find.location);
+
 }
 useEffect(() => {
     getGymData();
