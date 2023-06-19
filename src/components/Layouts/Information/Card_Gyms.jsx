@@ -4,7 +4,7 @@ import styles from './styles.module.scss'
 
 
 import { useParams } from "react-router-dom";
-
+ 
 
 const Card_Gyms = () => {
 const [details,setDetails] = useState([])
@@ -27,7 +27,7 @@ useEffect(() => {
         <div className={styles.details}>
             <div className={styles.product}>
             <img src={details.find.img} />
-                <div>
+                <div className={styles.information}>
                     <p>
                         {details.find.name}
                     </p>
@@ -35,7 +35,7 @@ useEffect(() => {
                         {details.find.address}
                     </p>
                 </div>
-                <div>
+                <div className={styles.adress}>
                     <iframe 
                     src={details.find.location} 
                     width="400" 

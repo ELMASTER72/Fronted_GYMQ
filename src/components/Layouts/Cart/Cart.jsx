@@ -3,7 +3,7 @@ import { ItemCart } from "../ItemCart/ItemCart";
 import CartContext from "../../ui/Cart_store/Car_Store";
 import styles from "./styles.module.scss"
 
-const Cart = () => {
+const Cart = () => { 
     const [cartOpen, setCartOpen] = useState(false);
     const [productsLength, setProductsLength] = useState(0);
 
