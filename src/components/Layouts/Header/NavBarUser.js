@@ -8,23 +8,18 @@ function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate()
   const [showModal, setShowModal] = useState(false);
-  const [showProfileModal, setShowProfileModal] = useState(false)
 
   const handleProfileButtonClick = () => {
     setShowModal(true);
-    setShowProfileModal(false)
   }; 
-  const handleProfileButtonClickModal = () => {
-    setShowModal(false);
-    setShowProfileModal(true)
+  function handleProfileButtonClickModal (){
+    navigate('/profile')
   }; 
+
   const closeModal = () => {
     setShowModal(false);
   };
   
-  const closeModalProfile = () => {
-    setShowProfileModal(false);
-  };
 
 
   const toggleMenu = () => {
@@ -39,9 +34,7 @@ function Navbar() {
     navigate('/')
   }
 
-  function userperfil(){
-    navigate("/profile")
-  }
+  
   return (
     <div id="sticky-header" className="dreamhub_nav_manu">
             <div className="logo">
@@ -71,7 +64,7 @@ function Navbar() {
             </nav>
             <div className="dreamhub-btn-profile">
               <button onClick={handleProfileButtonClick}>
-                {/* {apiData?.username} */} Hola
+                {apiData?.username}
               </button>
               {showModal && (
                 <div className="modalBackdrop">
@@ -90,16 +83,6 @@ function Navbar() {
                     <button className='close' style={{ color: 'black' }} onClick={closeModal}>
                       X
                     </button>
-                  </div>
-                </div>
-              )}
-              {showProfileModal && (
-                <div className="modalBackdrop">
-                  <div className="modalProfileContent">
-                    <div className='modalContentProfile'>
-                      <h1>Perfil</h1>
-                    </div>
-                    <button style={{ color: 'black' }} onClick={closeModalProfile}>X</button>
                   </div>
                 </div>
               )}

@@ -19,6 +19,7 @@ import { CardProvider } from './components/ui/Card_Gym/Card_Gym';
 
 
 
+
 /** auth middleware */
 import { AuthorizeUser, ProtectRoute } from './middleware/auth'
 
@@ -67,7 +68,7 @@ const router = createBrowserRouter([
     {
         path : '/Visual_Gym',
         element : <CardProvider><Gyms_stock/></CardProvider>
-    }
+    },
 ])
 
 export default function App() {

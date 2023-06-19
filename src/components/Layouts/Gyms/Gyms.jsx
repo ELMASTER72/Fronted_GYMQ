@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import CardContext from "../../ui/Card_Gym/Card_Gym";
 import styles from "./styles.module.scss"
-import { Link, useNavigate } from 'react-router-dom'
+
 
 const Gyms = () => {
-    const {gym} = useContext(CardContext);
-    
+    const {gym,info} = useContext(CardContext);
 return(
     <div className={styles.productsContainer}>
         {gym &&
@@ -19,7 +18,7 @@ return(
                     <p>
                         {gyms.address}
                     </p>
-                    <span><Link className='text-red-500' to="/Information">Detalles</Link></span>
+                    <button>Detalles</button>
                 </div>
                 
             </div>
@@ -29,3 +28,4 @@ return(
 }
 
 export default Gyms;
+
