@@ -17,7 +17,7 @@ export default function Profile() {
   const [{ isLoading, apiData, serverError }] = useFetch();
   const navigate = useNavigate()
  
-  const formik = useFormik({
+  const formik = useFormik({ 
     initialValues : {
       firstName : apiData?.firstName || '',
       lastName: apiData?.lastName || '',
@@ -62,13 +62,10 @@ export default function Profile() {
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
       <div className='flex justify-center items-center h-screen'>
-        <div className={`${styles.glass} ${extend.glass}`} style={{ width: "45%", paddingTop: '3em'}}>
+        <div className={`${styles.glassProfile} ${extend.glass}`} style={{ width: "45%", paddingTop: '3em'}}>
 
           <div className="title flex flex-col items-center">
             <h4 className='text-5xl font-bold'>Profile</h4>
-            <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
-                You can update the details.
-            </span>
           </div>
 
           <form className='py-1' onSubmit={formik.handleSubmit}>
@@ -93,12 +90,12 @@ export default function Profile() {
 
                
                   <input {...formik.getFieldProps('address')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Address' />
-                  <button className={styles.btn} type='submit'>Update</button>
+                  <button className={styles.btn} type='submit'>Actualizar</button>
                   
               </div>
 
               <div className="text-center py-4">
-                <span className='text-gray-500'>come back later? <button onClick={userLogout} className='text-red-500' to="/Home">Pagina principal</button></span>
+                <span className='text-gray-500'>¿vuelve mas tarde? <button onClick={userLogout} className='text-red-500' to="/Home">Pagina principal</button></span>
               </div>
 
           </form>

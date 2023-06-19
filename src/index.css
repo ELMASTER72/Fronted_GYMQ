@@ -945,3 +945,7 @@ body{
     width: 15%;
     height: 50%;
   }
+
+  .pt-20 div {
+    margin-left: -0.1rem;
+  }
