@@ -14,6 +14,7 @@ import Home from './components/Pages/Home';
 import HomeUser from './components/Pages/HomeUser';
 import Marketplace from './components/Pages/Marketplace/Marketplace';
 import Gyms_stock from './components/Pages/Gyms/Gyms_stock';
+import Details from './components/Pages/Details/Details';
 import { CartProvider } from './components/ui/Cart_store/Car_Store';
 import { CardProvider } from './components/ui/Card_Gym/Card_Gym';
 
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
         path : '/Visual_Gym',
         element : <CardProvider><Gyms_stock/></CardProvider>
     },
+    {
+        path : '/Information/:name',
+        element : <CardProvider><Details/></CardProvider>
+    }
 ])
 
 export default function App() {
