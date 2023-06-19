@@ -15,9 +15,11 @@ import HomeUser from './components/Pages/HomeUser';
 import Marketplace from './components/Pages/Marketplace/Marketplace';
 import Gyms_stock from './components/Pages/Gyms/Gyms_stock';
 import Details from './components/Pages/Details/Details';
+import Rutines from './components/Pages/Rutines/Rutines_stock'
+import DetailsRutine from './components/Pages/DetailsRutine/DetailsRutine';
 import { CartProvider } from './components/ui/Cart_store/Car_Store';
 import { CardProvider } from './components/ui/Card_Gym/Card_Gym';
-
+import { CardrutineProvider } from './components/ui/CardRutine/Card_Rutine';
 
 
 
@@ -73,6 +75,14 @@ const router = createBrowserRouter([
     {
         path : '/Information/:name',
         element : <CardProvider><Details/></CardProvider>
+    },
+    {
+        path : '/visual_Rutine',
+        element : <CardrutineProvider><Rutines/></CardrutineProvider>
+    },
+    {
+        path : '/detail/:name',
+        element : <CardrutineProvider><DetailsRutine/></CardrutineProvider>
     }
 ])
 

@@ -31,7 +31,7 @@ function Navbar() {
                     Servicios <i className="fas fa-chevron-down"></i>
                   </a>
                   <ul className="sub-menu">
-                    <li><a href="">Rutinas</a></li>
+                    <li><a href="/visual_Rutine">Rutinas</a></li>
                     <li><a href="/Store">Tienda</a></li>
                   </ul>
                 </li>

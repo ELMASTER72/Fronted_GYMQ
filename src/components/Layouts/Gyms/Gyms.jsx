@@ -13,7 +13,7 @@ return(
             <div key={i} className={styles.product} >
                 <img src={gyms.img} alt={gyms.name}/>
                 <div>
-                    <p key={gyms.name}>
+                    <p>
                         {gyms.name}
                     </p>
                     <p>
