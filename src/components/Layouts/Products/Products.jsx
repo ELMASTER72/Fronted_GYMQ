@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import CartContext from "../../ui/Cart_store/Car_Store";
 import styles from "./styles.module.scss"
-import '../../../index.css'
-
+ 
 const Products = () => {
     const { addItemToCart, products } = useContext(CartContext);
     
@@ -11,7 +10,7 @@ const Products = () => {
       {products &&
         products.map((product, i) => (
           <div key={i} className={styles.product}>
-            <div className="productsList">
+            <div>
               <img src={product.img} alt={product.name} />
               <div>
                 <p>
@@ -24,7 +23,7 @@ const Products = () => {
             </div>
             {!product.inCart ? (
               <button onClick={() => addItemToCart(product)}>
-                Add to Cart
+                Añadir al Carrito
               </button>
             ) : (
               <button>En el carrito</button>

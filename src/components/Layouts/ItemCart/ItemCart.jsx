@@ -5,7 +5,7 @@ import styles from "./styles.module.scss"
 export const ItemCart = ({item}) =>{
     const {editItemToCart} = useContext(CartContext);
 
-    const {amount} = item;
+    const {amount} = item;  
 
     return(
         <div className={styles.cartItem}>

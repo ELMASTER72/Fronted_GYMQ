@@ -4,7 +4,7 @@ function PageServicesHeader() {
   return (
     <header className="entry-header">
       <h1 className="entry-title">
-        Servicios
+        Tienda
       </h1>
       <nav
         id="thebase-breadcrumbs"
@@ -18,12 +18,12 @@ function PageServicesHeader() {
               itemprop="url"
               className="thebase-bc-home"
             >
-              <span>Inicio</span>
+              <span>Servicios</span>
             </a>
           </span>{' '}
           <span className="bc-delimiter">/</span>{' '}
           <span className="thebase-bread-current">
-            Servicios
+            Tienda
           </span>
         </div>
       </nav>
