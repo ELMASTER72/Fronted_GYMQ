@@ -9,8 +9,7 @@
 }
 
 body{
-    background: #dcdce6;
-    background-image: url('./assets/Background.png');
+    background: #000;
 }
 
 /* HOME */
@@ -933,3 +932,16 @@ body{
   .profileRegister {
     margin-top: -2.5rem;
   } 
+
+  /* PRODUCTS */
+  .productsList {
+    border: solid 2px red;
+    width: 110%;
+    padding: 1rem;
+    height: 60%;
+    background-color: #fff;
+  }
+  .productsList img {
+    width: 15%;
+    height: 50%;
+  }

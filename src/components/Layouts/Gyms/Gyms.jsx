@@ -7,20 +7,20 @@ import { Link } from "react-router-dom";
 const Gyms = () => {
     const {gym} = useContext(CardContext);
 
-return(
+return( 
     <div className={styles.productsContainer}>
         {gym.map((gyms, i) => (
             <div key={i} className={styles.product} >
                 <img src={gyms.img} alt={gyms.name}/>
-                <div>
+                <div className={styles.gymInformation}>
                     <p key={gyms.name}>
                         {gyms.name}
                     </p>
                     <p>
                         {gyms.address}
                     </p>
-                    <Link to={`/Information/${gyms.name}`} >Detalles</Link>
                 </div>
+                <Link className={styles.btn} to={`/Information/${gyms.name}`} >Detalles</Link>
                 
             </div>
         ))}

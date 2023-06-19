@@ -17,7 +17,7 @@ import Gyms_stock from './components/Pages/Gyms/Gyms_stock';
 import Details from './components/Pages/Details/Details';
 import { CartProvider } from './components/ui/Cart_store/Car_Store';
 import { CardProvider } from './components/ui/Card_Gym/Card_Gym';
-
+import Us from './components/Pages/Us';
 
 
 
@@ -73,6 +73,10 @@ const router = createBrowserRouter([
     {
         path : '/Information/:name',
         element : <CardProvider><Details/></CardProvider>
+    },
+    {
+        path: '/Nosotros',
+        element: <Us></Us>
     }
 ])
 

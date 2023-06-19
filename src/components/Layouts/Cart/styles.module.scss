@@ -74,7 +74,13 @@
       .productsContainer{
         max-height: 200px;
         overflow-y: scroll;
-        margin-top: 5px;
+      }
+
+      .product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: solid 4px blue;
       }
     }
   }
