@@ -1,16 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import useFetch from '../../../hooks/fetch.hook';
 import { useAuthStore } from '../../../store/store';
 import { useNavigate } from 'react-router-dom'
+import avatar from '../../../assets/profile.png';
 
 function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate()
-  const [showOptions, setShowOptions] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [showProfileModal, setShowProfileModal] = useState(false)
 
   const handleProfileButtonClick = () => {
-    setShowOptions(!showOptions);
+    setShowModal(true);
+    setShowProfileModal(false)
   }; 
+  const handleProfileButtonClickModal = () => {
+    setShowModal(false);
+    setShowProfileModal(true)
+  }; 
+  const closeModal = () => {
+    setShowModal(false);
+  };
+  
+  const closeModalProfile = () => {
+    setShowProfileModal(false);
+  };
+
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -58,14 +73,39 @@ function Navbar() {
               <button onClick={handleProfileButtonClick}>
                 {/* {apiData?.username} */} Hola
               </button>
-              {showOptions && (
-                <div className='modalProfile'>
-                  <button onClick={userperfil} className="text-red-500">Perfil</button>
-                  <button onClick={userLogout} className="text-red-500">Salir</button>
+              {showModal && (
+                <div className="modalBackdrop">
+                  <div className="modalProfile">
+                    <div className="modalContent">
+                      <div className="profile flex justify-center py-4">
+                        <img src={avatar} className="avatar-profile" alt="avatar" />
+                      </div>
+                      <button style={{ color: 'black' }} onClick={handleProfileButtonClickModal}>
+                        Perfil
+                      </button>
+                      <button style={{ color: 'black' }} onClick={userLogout}>
+                        Cerrar Sesión
+                      </button>
+                    </div>
+                    <button className='close' style={{ color: 'black' }} onClick={closeModal}>
+                      X
+                    </button>
+                  </div>
+                </div>
+              )}
+              {showProfileModal && (
+                <div className="modalBackdrop">
+                  <div className="modalProfileContent">
+                    <div className='modalContentProfile'>
+                      <h1>Perfil</h1>
+                    </div>
+                    <button style={{ color: 'black' }} onClick={closeModalProfile}>X</button>
+                  </div>
                 </div>
               )}
             </div>
-    </div>
+            
+  </div>
   );
 }
 
