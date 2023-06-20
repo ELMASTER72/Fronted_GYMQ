@@ -26,19 +26,18 @@ useEffect(() => {
     return(
         <div className={styles.details}>
             <div className={styles.product}>
-            <img src={details.find.img} />
                 <div>
                     <p>
                         {details.find.name}
                     </p>
                     <p>
                         {details.find.channel}
-                    </p>
+                    </p>                    
+                <img src={details.find.img} />
+                </div>
                 </div>
                     <ReactPlayer controls url={details.find.url}/>
                 <div>
-                    
-                </div>
             </div>
         </div>
             
