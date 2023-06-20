@@ -16,15 +16,15 @@ const Rutines = () => {
         return true
     })
     return(
-        <div className="searchProducts">
-                <input
-                    type="text"
-                    className='input'
-                    value={searchQuery}
-                    onChange={handleSearch}
-                    placeholder="Buscar..."
-                />
         <div className={styles.productsContainer}>
+            <div className={styles.search}>
+                    <input
+                        type="text"
+                        className={styles.input}
+                        value={searchQuery}
+                        onChange={handleSearch}
+                        placeholder="Buscar..."
+                    />
             {rutine &&
             filterCard.map((rutines,i) => (
                 <div key={i} className={styles.product} >

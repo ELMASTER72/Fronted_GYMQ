@@ -30,6 +30,27 @@
         padding: 7px;
         color: white;
       }
+
+    }
+    .input {
+      min-width: 600px;
+      background-color: #000;
+      color: #fff;
+      padding: .15rem .5rem;
+      min-height: 40px;
+      border-radius: 4px;
+      outline: none;
+      border: none;
+      line-height: 1.15;
+      box-shadow: 0px 10px 20px -18px;  
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .input:focus {
+      border-radius: 4px 4px 2px 2px;  
+    }
+    .input:hover {
+      outline: 1px solid lightgrey;
     }
     .btn{
       color: white;
