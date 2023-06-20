@@ -598,7 +598,7 @@ body{
     padding: 1rem;
   }
   .input {
-    min-width: 700px;
+    min-width: 600px;
     background-color: #f5f5f5;
     color: #242424;
     padding: .15rem .5rem;

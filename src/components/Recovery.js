@@ -75,6 +75,7 @@ export default function Recovery() {
                     <span className='py-4 text-sm text-left text-gray-500'>
                     Ingrese OTP de 6 dígitos enviado a su dirección de correo electrónico.
                     </span>
+                    <br/>
                     <input onChange={(e) => setOTP(e.target.value) } className={styles.textbox} type="text" placeholder='OTP' />
                   </div>
 
