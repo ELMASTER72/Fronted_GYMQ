@@ -21,6 +21,8 @@ import { CartProvider } from './components/ui/Cart_store/Car_Store';
 import { CardProvider } from './components/ui/Card_Gym/Card_Gym';
 import { CardrutineProvider } from './components/ui/CardRutine/Card_Rutine';
 import Us from './components/Pages/Us'
+import UsUser from './components/Pages/UsUser';
+
 
 
 
@@ -67,7 +69,7 @@ const router = createBrowserRouter([
     },
     {
         path : '/Store',
-        element : <CartProvider><Marketplace/></CartProvider>
+        element :  <AuthorizeUser><CartProvider><Marketplace/></CartProvider></AuthorizeUser>
     },
     {
         path : '/Visual_Gym',
@@ -88,6 +90,10 @@ const router = createBrowserRouter([
     {
         path: '/Nosotros',
         element: <Us></Us>
+    },
+    {
+        path: '/NosotrosUser',
+        element: <UsUser></UsUser>
     }
 ])
 

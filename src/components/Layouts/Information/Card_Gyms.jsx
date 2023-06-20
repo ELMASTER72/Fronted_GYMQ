@@ -24,7 +24,7 @@ useEffect(() => {
     return(
         <div className={styles.details}>
             <div>
-                    <p>
+                    <p style={{ fontSize: '800%' }}>
                         {details.find.name}
                     </p>
                     <p>

@@ -5,6 +5,7 @@ import { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import { usernameValidate } from '../helper/validate'
 import { useAuthStore } from '../store/store'
+import Navbar from './Layouts/Header/NavBar';
  
 import styles from '../styles/Username.module.css';
 import '../index.css'
@@ -29,7 +30,7 @@ export default function Username() {
 
   return (
     <div className="container">
-
+      <Navbar/>
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
       <div className='flex justify-center items-center h-screen'>

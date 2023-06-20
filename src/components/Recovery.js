@@ -5,6 +5,7 @@ import styles from '../styles/Username.module.css';
 import '../index.css'
 import { generateOTP, verifyOTP } from '../helper/helper';
 import { useNavigate } from 'react-router-dom'
+import Navbar from './Layouts/Header/NavBar';
 
 export default function Recovery() {
 
@@ -54,7 +55,7 @@ export default function Recovery() {
 
   return (
     <div className="container mx-auto">
-
+      <Navbar/>
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
       <div className='flex justify-center items-center h-screen'>

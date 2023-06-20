@@ -7,6 +7,7 @@ import convertToBase64 from '../helper/convert';
 import useFetch from '../hooks/fetch.hook';
 import { updateUser } from '../helper/helper'
 import { useNavigate } from 'react-router-dom'
+import Navbar from './Layouts/Header/NavBarUser';
 
 import styles from '../styles/Username.module.css';
 import extend from '../styles/Profile.module.css'
@@ -58,14 +59,14 @@ export default function Profile() {
 
   return (
     <div className="container mx-auto">
-
+      <Navbar/>
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
       <div className='flex justify-center items-center h-screen'>
         <div className={`${styles.glassProfile} ${extend.glass}`} style={{ width: "45%", paddingTop: '3em'}}>
 
           <div className="title flex flex-col items-center">
-            <h4 className='text-5xl font-bold'>Profile</h4>
+            <h4 className='text-5xl font-bold'>{apiData?.username}</h4>
           </div>
 
           <form className='py-1' onSubmit={formik.handleSubmit}>
@@ -95,7 +96,7 @@ export default function Profile() {
               </div>
 
               <div className="text-center py-4">
-                <span className='text-gray-500'>¿vuelve mas tarde? <button onClick={userLogout} className='text-red-500' to="/Home">Pagina principal</button></span>
+              <button className={styles.btn} onClick={userLogout}>Volver al Inicio</button>
               </div>
 
           </form>

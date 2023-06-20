@@ -6,6 +6,7 @@ import { useFormik } from 'formik';
 import { registerValidation } from '../helper/validate';
 import convertToBase64 from '../helper/convert';
 import { registerUser } from '../helper/helper'
+import Navbar from './Layouts/Header/NavBar';
 
 
 import styles from '../styles/Username.module.css';
@@ -45,7 +46,7 @@ export default function Register() {
 
   return (
     <div className="container mx-auto">
-
+      <Navbar/>
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
       <div className='flex justify-center items-center h-screen'>

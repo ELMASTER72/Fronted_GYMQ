@@ -8,6 +8,8 @@ import useFetch from '../hooks/fetch.hook';
 import { useAuthStore } from '../store/store'
 import { verifyPassword } from '../helper/helper'
 import styles from '../styles/Username.module.css';
+import Navbar from './Layouts/Header/NavBar';
+
 
 export default function Password() {
 
@@ -45,7 +47,7 @@ export default function Password() {
 
   return (
     <div className="container mx-auto">
-
+      <Navbar/>
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
       <div className='flex justify-center items-center h-screen'>

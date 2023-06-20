@@ -3,7 +3,7 @@ import Gyms from "../../Layouts/Gyms/Gyms";
 import PageGymHeader from "../../Layouts/Header/PageGymHeader";
 import Footer from '../../Layouts/Footer/Footer'
 import styles from "./styles.module.scss"
-import Navbar from '../../Layouts/Header/NavBar'
+import Navbar from "../../Layouts/Header/NavBarUser";
 
 const Gyms_stock = () => {
     return(

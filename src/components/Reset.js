@@ -6,6 +6,7 @@ import { resetPassword } from '../helper/helper'
 import { useAuthStore } from '../store/store';
 import { useNavigate, Navigate } from 'react-router-dom';
 import useFetch from '../hooks/fetch.hook'
+import Navbar from './Layouts/Header/NavBar';
 
 import styles from '../styles/Username.module.css';
  
@@ -45,6 +46,7 @@ export default function Reset() {
 
   return (
     <div className="container mx-auto">
+      <Navbar/>
 
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
