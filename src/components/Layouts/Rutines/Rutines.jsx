@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import CardRutineContext from "../../ui/CardRutine/Card_Rutine";
 import styles from './styles.module.scss'
 import { Link } from "react-router-dom";
-
+ 
 const Rutines = () => {
     const {rutine} = useContext(CardRutineContext)
 
@@ -11,14 +11,14 @@ const Rutines = () => {
             {rutine.map((rutines,i) => (
                 <div key={i} className={styles.product} >
                 <img src={rutines.img} alt={rutines.name}/>
-                <div>
+                <div className={styles.information}>
                     <p>
                         {rutines.name}
                     </p>
                     <p>
                         {rutines.channel}
                     </p>
-                    <Link to={`/detail/${rutines.name}`} >Detalles</Link>
+                    <Link className={styles.btn} to={`/detail/${rutines.name}`} >Detalles</Link>
                 </div>
                 
             </div>

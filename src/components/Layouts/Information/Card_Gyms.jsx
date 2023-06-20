@@ -20,21 +20,13 @@ const getGymData = async () => {
 
 }
 useEffect(() => {
-    getGymData();
+    getGymData(); 
 },[])
 
     return(
         <div className={styles.details}>
             <div className={styles.product}>
-            <img src={details.find.img} />
-                <div className={styles.information}>
-                    <p>
-                        {details.find.name}
-                    </p>
-                    <p>
-                        {details.find.address}
-                    </p>
-                </div>
+                <img src={details.find.img} />
                 <div className={styles.adress}>
                     <iframe 
                     src={details.find.location} 
@@ -47,6 +39,14 @@ useEffect(() => {
                       </iframe>
                 </div>
             </div>
+            <div className={styles.information}>
+                    <p>
+                        {details.find.name}
+                    </p>
+                    <p>
+                        {details.find.address}
+                    </p>
+                </div>
         </div>
             
     ) 

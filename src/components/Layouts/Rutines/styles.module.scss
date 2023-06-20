@@ -1,35 +1,39 @@
 .productsContainer {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 0fr);
-    grid-row-gap: 20px;
-    grid-column-gap: 75px;
-    justify-items: center;
-    justify-content: center;
+    background-color: #FFF;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   
     .product {
-      width: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-  
+      width: 260px;
+      height: 350px;
+      background: black;
+      padding: .4em;
+      border-radius: 6px;
+      text-align: center;
+
+      .information {
+        margin-top: 1rem;
+      }
+
       img {
+        background-color: rgb(236, 236, 236);
         width: 100%;
+        height: 60%;
+        border-radius: 6px 6px 0 0;
       }
   
       p {
-        font-family: Roboto;
-        text-align: center;
-        font-weight: bolder;
+        font-weight: 600;
+        padding: 7px;
+        color: white;
       }
     }
     .btn{
-      background-color: black;
       color: white;
-      padding: 1rem;
-      width: 60%;
-      border-radius: 10px;
+      width: 70%;
+      border-bottom: solid 1px #FFF000;
   }
 }

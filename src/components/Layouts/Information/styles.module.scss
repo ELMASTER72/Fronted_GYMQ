@@ -1,17 +1,23 @@
 .details {
     width: 100%;
     display: flex;
+    flex-direction: column;
     background-color: white;
   
     .product { 
       width: 100%;
       display: flex;
-      flex-wrap: wrap;
+      padding: 2rem;
       justify-content: space-around;
-      gap: 10px;
-  
+
       img {
-        width: 100%;
+        background-color: rgb(236, 236, 236);
+        width: 50%;
+        height: 60%;
+        border-radius: 6px 6px 0 0;
+      }
+      img:hover {
+        transform: scale(0.98);
       }
   
       p {
@@ -20,15 +26,6 @@
         font-weight: bolder;
         color: black;
       }
-    }
-    .information {
-      margin-top: 1rem;
-      padding: 1rem;
-    }
-    .adress {
-      margin-bottom: 2rem;
-      margin-top: 2rem;
-      border: solid 1px black;
     }
     .btn{
       background-color: black;
