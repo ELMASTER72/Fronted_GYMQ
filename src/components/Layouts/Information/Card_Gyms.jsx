@@ -1,10 +1,8 @@
 import React, {  useState,useEffect } from "react";
 import axios from "axios";
 import styles from './styles.module.scss'
-
-
 import { useParams } from "react-router-dom";
- 
+import Table from "./Table";
 
 const Card_Gyms = () => {
 const [details,setDetails] = useState([])
@@ -25,20 +23,6 @@ useEffect(() => {
 
     return(
         <div className={styles.details}>
-            <div className={styles.product}>
-                <img src={details.find.img} />
-                <div className={styles.adress}>
-                    <iframe 
-                    src={details.find.location} 
-                    width="400" 
-                      height="300" 
-                      style={{border:"0" }}
-                      allowfullscreen="" 
-                      loading="lazy" 
-                      referrerpolicy="no-referrer-when-downgrade">
-                      </iframe>
-                </div>
-            </div>
             <div className={styles.information}>
                     <p>
                         {details.find.name}
@@ -46,6 +30,21 @@ useEffect(() => {
                     <p>
                         {details.find.address}
                     </p>
+                </div>
+                <Table />
+                <div className={styles.product}>
+                    <img src={details.find.img} />
+                    <div className={styles.adress}>
+                        <iframe 
+                        src={details.find.location} 
+                        width="400" 
+                        height="300" 
+                        style={{border:"0" }}
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
         </div>
             
