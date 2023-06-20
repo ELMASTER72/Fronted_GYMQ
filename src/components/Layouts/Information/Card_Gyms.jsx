@@ -23,7 +23,7 @@ useEffect(() => {
 
     return(
         <div className={styles.details}>
-            <div className={styles.information}>
+            <div>
                     <p>
                         {details.find.name}
                     </p>

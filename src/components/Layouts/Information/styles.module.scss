@@ -21,13 +21,11 @@
       img:hover {
         transform: scale(0.98);
       }
-  
+
       p {
-        font-family: Roboto;
-        text-align: center;
-        font-weight: bolder;
         color: black;
-        font-size: 2rem;
+        border: solid 1px black;
+        font-size: 4rem;
       }
     }
     .btn{
@@ -37,4 +35,36 @@
       width: 60%;
       border-radius: 10px;
   }
+}
+
+.table {
+  padding: 1rem;
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: solid 1px black;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los encabezados de columna */
+th {
+  background-color: #ffee00b0;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Estilos para las celdas de datos */
+td {
+  padding: 10px;
+  border: solid 1px black;
+  text-align: left;
+}
+
+/* Estilos para filas alternas */
+tr:nth-child(even) {
+  background-color: #ffee00ae;
 }
