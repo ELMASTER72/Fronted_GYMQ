@@ -1,14 +1,59 @@
-import React, { useContext } from "react";
+import React, { useContext , useState} from "react";
 import CartContext from "../../ui/Cart_store/Car_Store";
 import styles from "./styles.module.scss"
- 
+
+
 const Products = () => {
     const { addItemToCart, products } = useContext(CartContext);
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [searchQuery, setSearchQuery] = useState('');
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDropdown = () => {
+      setIsOpen(!isOpen);
+    };
+    const handleSearch = (event) => {
+      setSearchQuery(event.target.value);
+      };
+      const handleCategorySelect = (category) => {
+        setSelectedCategory(category);
+        setSearchQuery('');
+        setIsOpen(false);
+      };
+
+    const filterCard = products.filter((product) => {
+      if(selectedCategory && product.category !== selectedCategory){
+        return false
+      }
+      if(searchQuery && !product.name.toLowerCase().includes(searchQuery.toLowerCase())){
+        return false
+      }
+      return true;
+    })
     
     return(
+      <div className="searchProducts">
+                <input
+                    type="text"
+                    className='input'
+                    value={searchQuery}
+                    onChange={handleSearch}
+                    placeholder="Buscar..."
+                />
+    <button className="mainButton" onClick={toggleDropdown}>Categorías</button>
+    {isOpen && (
+        <ul className="categorys">
+          <ul className="categorys">
+          <li onClick={() => window.location.reload()}>Todo</li>
+          <li onClick={() => handleCategorySelect('ropa')}>Ropa</li>
+          <li onClick={() => handleCategorySelect('accesorios')}>Accesorios</li>
+          <li onClick={() => handleCategorySelect('suplemento')}>suplementos</li>
+        </ul> 
+        </ul>
+      )}  
         <div className={styles.productsContainer}>
       {products &&
-        products.map((product, i) => (
+        filterCard.map((product, i) => (
           <div key={i} className={styles.product}>
             <div>
               <img src={product.img} alt={product.name} />
@@ -30,6 +75,7 @@ const Products = () => {
             )}
           </div>
         ))}
+    </div>
     </div>
     )
 }
