@@ -3,20 +3,10 @@ import PerfilUsuario from './PerfilDesplegable';
 
 
 function Navbar() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
-
-  
   return (
     <div id="sticky-header" className="dreamhub_nav_manu">
             <div className="logo">
-              <a className="main_sticky" href="/" title="dreamhub">
+              <a className="main_sticky" href="/home" title="dreamhub">
                 <h2>GYM<font color='#FFF000'>QU</font></h2>
               </a>
             </div>

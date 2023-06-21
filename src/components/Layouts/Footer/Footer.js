@@ -34,8 +34,8 @@ const Footer = () => {
 								<h2>Enlaces Rapidos</h2>
 							</div>
 							<ul>
-								<li><a href="#">Inicio</a></li>
-								<li><a href="#">Sobre Mi</a></li>
+								<li><a href="/Login">Iniciar Sesion</a></li>
+								<li><a href="/register">Registrarse</a></li>
 							</ul>
 						</div>
 						<div className="footer-widget right">
@@ -44,9 +44,7 @@ const Footer = () => {
 							</div>
 							<div className="footer-widget link">
 								<ul>
-									<li><a href="#">Nosotros</a></li>
-									<li><a href="#">Servicios</a></li>
-									<li><a href="#">Politica de Privacidad</a></li>
+									<li><a href="/Nosotros">Nosotros</a></li>
 								</ul>
 							</div>
 						</div>
@@ -55,8 +53,8 @@ const Footer = () => {
 								<h2>Contacto</h2>
 							</div>
 							<ul>
-								<li><i className="bi bi-telephone"></i> +3044 3037 44</li>
-								<li><i className="fas fa-at"></i>example@mail.com</li>
+								<li><i className="bi bi-telephone"></i>(+57) 300 424 5514</li>
+								<li><i className="fas fa-at"></i>gymqservice@gmail.com</li>
 								<li><i className="bi bi-geo-alt"></i> Armenia, Quindio</li>
 							</ul>
 						</div>

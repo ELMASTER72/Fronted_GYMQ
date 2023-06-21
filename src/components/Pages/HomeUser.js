@@ -16,9 +16,6 @@ function HomeUser() {
             <div className="homeMain">
                     <ServiceArea/>
                 </div>
-                <div className="sugerettionArea">
-                    <SugerettionArea/>
-                </div>
                 <div className="footerHome">
                     <Footer/>
                 </div>

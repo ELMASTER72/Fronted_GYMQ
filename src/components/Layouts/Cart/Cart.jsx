@@ -1,13 +1,18 @@
 import { useContext, useEffect, useState } from "react";
 import { ItemCart } from "../ItemCart/ItemCart";
 import CartContext from "../../ui/Cart_store/Car_Store";
+import { loadStripe } from "@stripe/stripe-js";
 import styles from "./styles.module.scss"
+import axios from "axios";
+
 
 const Cart = () => { 
     const [cartOpen, setCartOpen] = useState(false);
     const [productsLength, setProductsLength] = useState(0);
 
     const { cartItems } = useContext(CartContext);
+
+const stripePromise = loadStripe('pk_test_51NLFqLEa1CreedATKr9JAPuS7O0ExUyZaBX6ynmxFjAPDeMPE7RIzmSr83ttZAN3rwX3jeMweR9hRSZgVDXWGe3u00M9KaOi6r')
 
     useEffect(() => {
         setProductsLength(
@@ -19,6 +24,27 @@ const Cart = () => {
         (previous, current) => previous + current.amount * current.price,
         0
       );
+    const handleCheckout = async () => {
+      const lineItems = cartItems.map((item) => {
+        return {
+          price_data: {
+            currency: 'usd',
+            product_data:{
+              name: item.name
+            } ,
+            unit_amount: item.price * 100
+          },
+          quantity: item.amount
+        }
+      })
+      const {data} = await axios.post('/api/checkout',{lineItems})
+
+      const stripe = await stripePromise
+
+      await stripe.redirectToCheckout({sessionId: data.id})
+    }
+    
+
 
     return(
         <div className={styles.cartContainer}>
@@ -81,7 +107,7 @@ const Cart = () => {
               ))}
             </div>
           )}
-
+          <button onClick={handleCheckout}>checkout</button>
           <h2 className={styles.total}>Total: ${total}</h2>
         </div>
       )}

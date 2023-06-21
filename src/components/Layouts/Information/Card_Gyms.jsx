@@ -37,8 +37,8 @@ useEffect(() => {
                     <div className={styles.adress}>
                         <iframe 
                         src={details.find.location} 
-                        width="500" 
-                        height="300" 
+                        width="800" 
+                        height="600" 
                         style={{border:"0" }}
                         allowfullscreen="" 
                         loading="lazy" 

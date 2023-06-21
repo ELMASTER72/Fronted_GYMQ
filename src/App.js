@@ -22,6 +22,7 @@ import { CardProvider } from './components/ui/Card_Gym/Card_Gym';
 import { CardrutineProvider } from './components/ui/CardRutine/Card_Rutine';
 import Us from './components/Pages/Us'
 import UsUser from './components/Pages/UsUser';
+import Success from './components/success/Success';
 
 
 
@@ -94,6 +95,10 @@ const router = createBrowserRouter([
     {
         path: '/NosotrosUser',
         element: <UsUser></UsUser>
+    },
+    {
+        path :'/success',
+        element: <Success></Success>
     }
 ])
 
