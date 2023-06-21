@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import useFetch from '../../../hooks/fetch.hook';
-import { useAuthStore } from '../../../store/store';
 import { useNavigate } from 'react-router-dom'
 import { Menu, MenuItem, MenuButton } from '@szhsin/react-menu'
 

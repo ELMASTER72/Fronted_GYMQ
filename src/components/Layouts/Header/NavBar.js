@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 
 function Navbar() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
-
   return (
     <div id="sticky-header" className="dreamhub_nav_manu">
             <div className="logo">
