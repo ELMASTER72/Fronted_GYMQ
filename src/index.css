@@ -993,3 +993,38 @@ padding: 1px 1px 1px 12px;
   font-family: 'Kanit', sans-serif;
   font-size: 1.2rem;
 }
+
+/* PERFILDESPLEGABLE */
+.information {
+  border: solid 1px white;
+  padding: 6px;
+  height: 255px;
+  width: 400px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  background-color: black;
+  border-radius: 6px;
+}
+.information .cuenta .info .items {
+  color: white;
+  font-size: 20px;
+}
+.options {
+  margin-top: 3px;
+}
+.options button {
+  color: white;
+  font-size: 25px;
+}
+.options button:hover {
+  color: #FFF000;
+}
+.options svg {
+  color: white;
+}
+.options svg:hover {
+  color: #FFF000;
+}
