@@ -4,6 +4,7 @@ import Footer from '../../Layouts/Footer/Footer'
 import styles from "./styles.module.scss"
 import Navbar from "../../Layouts/Header/NavBarUser";
 
+
 const Gyms_stock = () => {
     return(
         <div className={styles.gymPage}>

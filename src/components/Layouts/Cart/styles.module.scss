@@ -45,10 +45,15 @@
   
     .cart {
       position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       margin-top: 10px;
       margin-right: 20px;
       border-radius: 30px;
-      width: 400px;
+      width: 500px;
+      height: 400px;
       background-color: #222222;
       color: white;
   
@@ -68,7 +73,14 @@
         text-align: center;
         font-weight: bold;
         margin-top: 15px;
-        padding-bottom: 35px;
+      }
+      .Pay{
+        padding-bottom: 5px;
+        width: 150px;
+        justify-content: center;
+        align-items: center;
+        background-color: #FFF000;
+        color: #222222;
       }
    
       .productsContainer{
@@ -97,3 +109,5 @@
     background-color: #797979;
     border-radius: 20px;
   }
+
+  

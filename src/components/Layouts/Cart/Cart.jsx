@@ -107,8 +107,9 @@ const stripePromise = loadStripe('pk_test_51NLFqLEa1CreedATKr9JAPuS7O0ExUyZaBX6y
               ))}
             </div>
           )}
-          <button onClick={handleCheckout}>checkout</button>
+          
           <h2 className={styles.total}>Total: ${total}</h2>
+          <button className={styles.Pay} onClick={handleCheckout}>Pagar</button>
         </div>
       )}
     </div>
