@@ -30,16 +30,15 @@ return(
         filterCard.map((gyms, i) => (
             <div key={i} className={styles.product} >
                 <img src={gyms.img} alt={gyms.name}/>
-                <div>
+                <div className={styles.container}>
                     <p key={gyms.name}>
                         {gyms.name}
                     </p>
                     <p>
                         {gyms.address}
                     </p>
-                </div>
                 <Link className={styles.btn} to={`/Information/${gyms.name}`} >Detalles</Link>
-                
+                </div>               
             </div>
         ))}
     </div>

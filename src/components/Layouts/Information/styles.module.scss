@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: white;
     padding: 1rem;
+    background-color: black;
   
     .product { 
       width: 100%;
@@ -24,7 +24,7 @@
       }
 
       p {
-        color: black;
+        color: white;
         border: solid 1px black;
         font-size: 50rem;
       }
@@ -48,24 +48,28 @@ table {
   border-collapse: collapse;
   border: solid 1px black;
   margin-bottom: 20px;
+  background-color: black;
 }
 
 /* Estilos para los encabezados de columna */
 th {
-  background-color: #ffee00b0;
+  background-color: #FFF000;
   font-weight: bold;
   text-align: left;
+  color: black;
   padding: 10px;
 }
 
 /* Estilos para las celdas de datos */
 td {
   padding: 10px;
+  color: white;
   border: solid 1px black;
   text-align: left;
 }
 
 /* Estilos para filas alternas */
 tr:nth-child(even) {
-  background-color: #ffee00ae;
+  color: black;
+  background-color: #FFF000;
 }

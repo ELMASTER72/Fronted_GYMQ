@@ -24,21 +24,21 @@ useEffect(() => {
     return(
         <div className={styles.details}>
             <div>
-                    <p style={{ fontSize: '800%' }}>
+                    <p style={{ fontSize: '200%', color: 'white' }}>
                         {details.find.name}
                     </p>
-                    <p>
+                    <p style={{ fontSize: '200%', color: 'white' }}>
                         {details.find.address}
                     </p>
                 </div>
-                <Table />
+                <Table /> 
                 <div className={styles.product}>
                     <img src={details.find.img} />
                     <div className={styles.adress}>
                         <iframe 
                         src={details.find.location} 
-                        width="800" 
-                        height="600" 
+                        width="500" 
+                        height="300" 
                         style={{border:"0" }}
                         allowfullscreen="" 
                         loading="lazy" 

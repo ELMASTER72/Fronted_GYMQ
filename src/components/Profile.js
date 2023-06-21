@@ -56,14 +56,14 @@ export default function Profile() {
 
   if(isLoading) return <h1 className='text-2xl font-bold'>isLoading</h1>;
   if(serverError) return <h1 className='text-xl text-red-500'>{serverError.message}</h1>
-
+ 
   return (
-    <div className="container mx-auto">
+    <div className={styles.container}>
       <Navbar/>
       <Toaster position='top-center' reverseOrder={false}></Toaster>
 
       <div className='flex justify-center items-center h-screen'>
-        <div className={`${styles.glassProfile} ${extend.glass}`} style={{ width: "45%", paddingTop: '3em'}}>
+        <div className={`${styles.glassProfile} ${extend.glassProfile}`} style={{ width: "45%", paddingTop: '3em'}}>
 
           <div className="title flex flex-col items-center">
             <h4 className='text-5xl font-bold'>{apiData?.username}</h4>

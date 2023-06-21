@@ -42,9 +42,15 @@
     box-shadow: 0 4px 30px #4747470b;
     backdrop-filter: blur(7.1px);
     width: 100%;
-    height: 95%
+    height: 100%;
 }
 
+.container {
+    background-image: url(https://res.cloudinary.com/dkyqaw07i/image/upload/v1687096367/Imagen25_m6q2tz.png);
+    max-width: 160%;
+    background-size: cover;
+    height: 110%;
+}
 
 .profile_img{
     @apply border-4 border-gray-100 w-[135px] rounded-full shadow-lg cursor-pointer;

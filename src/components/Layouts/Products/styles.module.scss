@@ -4,6 +4,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 2rem;
+    background-color: black;
+
+    .container {
+      height: 185px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
   
     .product {
       width: 300px;
@@ -41,6 +50,10 @@
   
       button:hover {
         background-color: #cecece;
+      }
+
+      .categorys {
+        background-color: #FFF000;
       }
     }
   }

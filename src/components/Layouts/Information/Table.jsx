@@ -19,9 +19,9 @@ const Table = () => {
                 <td>16:00 - 20:00</td>
                 </tr>
                 <tr>
-                <td>Martes</td>
-                <td>8:00 - 12:00</td>
-                <td>16:00 - 20:00</td>
+                <td style={{color: 'black'}}>Martes</td>
+                <td style={{color: 'black'}}>8:00 - 12:00</td>
+                <td style={{color: 'black'}}>16:00 - 20:00</td>
                 </tr>
                 <tr>
                 <td>Miércoles</td>
@@ -29,9 +29,9 @@ const Table = () => {
                 <td>16:00 - 20:00</td>
                 </tr>
                 <tr>
-                <td>Jueves</td>
-                <td>8:00 - 12:00</td>
-                <td>16:00 - 20:00</td>
+                <td style={{color: 'black'}}>Jueves</td>
+                <td style={{color: 'black'}}>8:00 - 12:00</td>
+                <td style={{color: 'black'}}>16:00 - 20:00</td>
                 </tr>
                 <tr>
                 <td>Viernes</td>

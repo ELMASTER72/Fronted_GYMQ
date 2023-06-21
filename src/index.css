@@ -166,16 +166,15 @@ body{
   }
   .carousel-caption-center {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);  
-    background-color: rgba(99, 97, 97, 0.657); /* Fondo claro */
+    background-color: rgba(0, 0, 0, 0.625);
     text-align: center;
     padding: 15px;
-    font-size: 34px; /* Tamaño de fuente mayor */
-    font-weight: bold; /* Fuente en negrita */
-    color: #FFF; /* Texto oscuro */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el texto */
+    font-size: 34px; 
+    font-weight: bold; 
+    color: #FFF; 
   }
   .carousel .control-arrow {
     font-size: 40px;
@@ -494,6 +493,7 @@ body{
   }
   .mission h2 {
     color: #FFF000;
+    font-size: 25px;
   }
   .mission p {
     color: #FFF;
@@ -913,7 +913,7 @@ body{
   }
   .text-5xl {
     font-size: 25px;
-    margin-top: 2rem;
+    margin-top: -2rem;
   }
   .textbox input {
     color: black;

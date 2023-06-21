@@ -2,7 +2,6 @@ import React, { useContext , useState} from "react";
 import CartContext from "../../ui/Cart_store/Car_Store";
 import styles from "./styles.module.scss"
 
-
 const Products = () => {
     const { addItemToCart, products } = useContext(CartContext);
     const [selectedCategory, setSelectedCategory] = useState(null);
@@ -40,14 +39,14 @@ const Products = () => {
                     onChange={handleSearch}
                     placeholder="Buscar..."
                 />
-    <button className="mainButton" onClick={toggleDropdown}>Categorías</button>
+    <button className={styles.categorys} style={{color: 'black', backgroundColor: '#FFF000', marginLeft: 2+'rem', padding: 1+'rem'}} onClick={toggleDropdown}>Categorías</button>
     {isOpen && (
         <ul className="categorys">
-          <ul className="categorys">
-          <li onClick={() => window.location.reload()}>Todo</li>
-          <li onClick={() => handleCategorySelect('ropa')}>Ropa</li>
-          <li onClick={() => handleCategorySelect('accesorios')}>Accesorios</li>
-          <li onClick={() => handleCategorySelect('suplemento')}>suplementos</li>
+          <ul style={{marginTop: 1+'rem'}}>
+          <li style={{color: '#FFF000', marginLeft: 4+'rem'}} onClick={() => window.location.reload()}>Todo</li>
+          <li style={{color: '#FFF000', marginLeft: 4+'rem'}} onClick={() => handleCategorySelect('ropa')}>Ropa</li>
+          <li style={{color: '#FFF000', marginLeft: 4+'rem'}} onClick={() => handleCategorySelect('accesorios')}>Accesorios</li>
+          <li style={{color: '#FFF000', marginLeft: 4+'rem'}} onClick={() => handleCategorySelect('suplemento')}>suplementos</li>
         </ul> 
         </ul>
       )}  
@@ -57,22 +56,22 @@ const Products = () => {
           <div key={i} className={styles.product}>
             <div>
               <img src={product.img} alt={product.name} />
-              <div>
+              <div className={styles.container}>
                 <p>
                   {product.name}
                 </p>
                 <p>
                   ${product.price}
                 </p>
+                {!product.inCart ? (
+                  <button onClick={() => addItemToCart(product)}>
+                    Añadir al Carrito
+                  </button>
+                ) : (
+                  <button>En el carrito</button>
+                )}
               </div>
             </div>
-            {!product.inCart ? (
-              <button onClick={() => addItemToCart(product)}>
-                Añadir al Carrito
-              </button>
-            ) : (
-              <button>En el carrito</button>
-            )}
           </div>
         ))}
     </div>
