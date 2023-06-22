@@ -28,7 +28,7 @@ import Success from './components/success/Success';
 
 
 /** auth middleware */
-import { AuthorizeUser, ProtectRoute } from './middleware/auth'
+import { AuthorizeUser, ProtectRoute, Authorizerol} from './middleware/auth'
 
 /** root routes */
 const router = createBrowserRouter([
@@ -70,7 +70,7 @@ const router = createBrowserRouter([
     },
     {
         path : '/Store',
-        element :  <AuthorizeUser><CartProvider><Marketplace/></CartProvider></AuthorizeUser>
+        element : <CartProvider><Marketplace/></CartProvider>
     },
     {
         path : '/Visual_Gym',
