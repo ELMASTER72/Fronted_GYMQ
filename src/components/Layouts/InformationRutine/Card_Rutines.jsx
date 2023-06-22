@@ -32,13 +32,13 @@ useEffect(() => {
                     </p>
                     <p>
                         {details.find.channel}
-                    </p>                    
-                <img src={details.find.img} />
+                    </p>         
                 </div>
-                </div>
-                    <ReactPlayer controls url={details.find.url}/>
-                <div>
             </div>
+            <div className={styles.video}>
+                <ReactPlayer controls url={details.find.url}/>
+            </div>
+            <a href="/visual_Rutine">Volver</a>
         </div>
             
     ) 

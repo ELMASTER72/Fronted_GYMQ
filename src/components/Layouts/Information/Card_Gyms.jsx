@@ -29,7 +29,7 @@ useEffect(() => {
                     </p>
                     <p style={{ fontSize: '200%', color: 'white' }}>
                         {details.find.address}
-                    </p>
+                    </p> 
                 </div>
                 <Table /> 
                 <div className={styles.product}>
@@ -37,8 +37,8 @@ useEffect(() => {
                     <div className={styles.adress}>
                         <iframe 
                         src={details.find.location} 
-                        width="800" 
-                        height="600" 
+                        width="400" 
+                        height="300" 
                         style={{border:"0" }}
                         allowfullscreen="" 
                         loading="lazy" 
@@ -46,6 +46,7 @@ useEffect(() => {
                         </iframe>
                     </div>
                 </div>
+                    <a href="/Visual_Gym">Volver</a>
         </div>
             
     ) 

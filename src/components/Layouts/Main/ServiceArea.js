@@ -18,9 +18,6 @@ const ServiceArea = () => {
               </div>
               <h3 className="service-title">Fuerza</h3>
               <p className="service-des">Levantamiento de Pesas, Dominadas, Flexiones de Brazos, Sentadillas, Peso Muerto.</p>
-              <div className="service-btn">
-                <a href="service.html">Ver Más<i className="bi bi-arrow-right-short"></i></a>
-              </div>
             </div>
             <div className="service-single-box">
               <div className="service-icon-img">
@@ -28,9 +25,6 @@ const ServiceArea = () => {
               </div>
               <h3 className="service-title">Resistencia</h3>
               <p className="service-des">Correr o Totrar, Natación, Ciclismo, Saltar la Cuerda, Escalada, Entrenamiento de Circuito.</p>
-              <div className="service-btn">
-                <a href="service.html">Ver Más<i className="bi bi-arrow-right-short"></i></a>
-              </div>
             </div>
             <div className="service-single-box">
               <div className="service-icon-img">
@@ -38,9 +32,6 @@ const ServiceArea = () => {
               </div>
               <h3 className="service-title">Cardio</h3>
               <p className="service-des">Remo, Kickboxing, Saltos Pliométricos, Baile, Entrenamiento de Circuito</p>
-              <div className="service-btn">
-                <a href="">Ver Más<i className="bi bi-arrow-right-short"></i></a>
-              </div>
             </div>
           </div>
     </div>
