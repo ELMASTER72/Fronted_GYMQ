@@ -36,8 +36,8 @@ export default function Profile() {
 
       toast.promise(updatePromise, {
         loading: 'Updating...',
-        success : <b>Update Successfully...!</b>,
-        error: <b>Could not Update!</b>
+        success : <b>Actualizaciòn completa...!</b>,
+        error: <b>¡No se pudo actualizar!</b>
       });
 
     }
@@ -54,7 +54,7 @@ export default function Profile() {
     navigate('/Home')
   }
 
-  if(isLoading) return <h1 className='text-2xl font-bold'>isLoading</h1>;
+  if(isLoading) return <h1 className='text-2xl font-bold'>  Cargando...</h1>;
   if(serverError) return <h1 className='text-xl text-red-500'>{serverError.message}</h1>
  
   return (
@@ -80,17 +80,17 @@ export default function Profile() {
 
               <div className="textbox flex flex-col items-center gap-6">
                 <div className="name flex w-3/4 gap-10">
-                  <input {...formik.getFieldProps('firstName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='FirstName' />
-                  <input {...formik.getFieldProps('lastName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='LastName' />
+                  <input {...formik.getFieldProps('firstName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Nombre: ' />
+                  <input {...formik.getFieldProps('lastName')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Apellido: ' />
                 </div>
 
                 <div className="name flex w-3/4 gap-10">
                   <input {...formik.getFieldProps('mobile')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Mobile No.' />
-                  <input {...formik.getFieldProps('email')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Email*' />
+                  <input {...formik.getFieldProps('email')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Correo Electrònico*' />
                 </div>
 
                
-                  <input {...formik.getFieldProps('address')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Address' />
+                  <input {...formik.getFieldProps('address')} className={`${styles.textbox} ${extend.textbox}`} type="text" placeholder='Direcciòn' />
                   <button className={styles.btn} type='submit'>Actualizar</button>
                   
               </div>

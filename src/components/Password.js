@@ -28,9 +28,9 @@ export default function Password() {
       
       let loginPromise = verifyPassword({ username, password : values.password })
       toast.promise(loginPromise, {
-        loading: 'Checking...',
-        success : <b>Login Successfully...!</b>,
-        error : <b>Password Not Match!</b>
+        loading: 'Cargando...',
+        success : <b>Inicio de Sesiòn completa...!</b>,
+        error : <b>¡La contraseña no es correcta!</b>
       });
 
       loginPromise.then(res => {

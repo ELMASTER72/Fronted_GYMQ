@@ -29,9 +29,9 @@ export default function Register() {
       values = await Object.assign(values, { profile : file || ''})
       let registerPromise = registerUser(values)
       toast.promise(registerPromise, {
-        loading: 'Creating...',
-        success : <b>Register Successfully...!</b>,
-        error : <b>Could not Register.</b>
+        loading: 'Creando Cuenta...',
+        success : <b>Registro completo...!</b>,
+        error : <b>No se pudo registrar.</b>
       });
 
       registerPromise.then(function(){ navigate('/Login')});
@@ -69,10 +69,10 @@ export default function Register() {
               </div>
 
               <div className="textbox flex flex-col items-center gap-6">
-                  <input {...formik.getFieldProps('email')} className={styles.textbox} type="text" placeholder='Email*' />
-                  <input {...formik.getFieldProps('username')} className={styles.textbox} type="text" placeholder='Username*' />
-                  <input {...formik.getFieldProps('password')} className={styles.textbox} type="text" placeholder='Password*' />
-                  <button className={styles.btn} type='submit'>Register</button>
+                  <input {...formik.getFieldProps('email')} className={styles.textbox} type="text" placeholder='Correo Electrònico*' />
+                  <input {...formik.getFieldProps('username')} className={styles.textbox} type="text" placeholder='Nombre Usuario*' />
+                  <input {...formik.getFieldProps('password')} className={styles.textbox} type="text" placeholder='Contraseña*' />
+                  <button className={styles.btn} type='submit'>Registrar</button>
               </div>
 
               <div className="text-center py-4">

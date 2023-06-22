@@ -4,7 +4,7 @@ import Card_Rutine from '../../Layouts/InformationRutine/Card_Rutines';
 
 const DetailsRutine = () => {
     return(
-        <div>
+        <div className=''>
             <Card_Rutine/>
         </div>
     )

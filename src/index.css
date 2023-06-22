@@ -138,15 +138,8 @@ body{
   .dreamhub-btn a {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #8d8d8d;
-    color: #000;
+    color: #FFF000;
     text-decoration: none;
-  }
-  .dreamhub-btn a:hover {
-    background-color: #FFF000;
-  }
-  .dreamhub-btn :hover {
-    background-color: #FFF000;
   }
   
   .dreamhub-btn-profile button {

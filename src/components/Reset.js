@@ -29,9 +29,9 @@ export default function Reset() {
       let resetPromise = resetPassword({ username, password: values.password })
 
       toast.promise(resetPromise, {
-        loading: 'Updating...',
-        success: <b>Reset Successfully...!</b>,
-        error : <b>Could not Reset!</b>
+        loading: 'Actualizando...',
+        success: <b>Actualizaciòn completa...!</b>,
+        error : <b>¡No se pudo actualizar!</b>
       });
 
       resetPromise.then(function(){ navigate('/password') })
@@ -54,17 +54,17 @@ export default function Reset() {
         <div className={styles.glass} style={{ width : "50%"}}>
 
           <div className="title flex flex-col items-center">
-            <h4 className='text-5xl font-bold'>Reset</h4>
+            <h4 className='text-5xl font-bold'>Actualizar Contraseña</h4>
             <span className='py-4 text-xl w-2/3 text-center text-gray-500'>
-              Enter new password.
+              Ingrese la nueva contraseña.
             </span>
           </div>
 
           <form className='py-20' onSubmit={formik.handleSubmit}>
               <div className="textbox flex flex-col items-center gap-6">
-                  <input {...formik.getFieldProps('password')} className={styles.textbox} type="text" placeholder='New Password' />
-                  <input {...formik.getFieldProps('confirm_pwd')} className={styles.textbox} type="text" placeholder='Repeat Password' />
-                  <button className={styles.btn} type='submit'>Reset</button>
+                  <input {...formik.getFieldProps('password')} className={styles.textbox} type="text" placeholder='Nueva contraseña' />
+                  <input {...formik.getFieldProps('confirm_pwd')} className={styles.textbox} type="text" placeholder='Confirmar contraseña' />
+                  <button className={styles.btn} type='submit'>Actualizar</button>
               </div>
 
           </form>
